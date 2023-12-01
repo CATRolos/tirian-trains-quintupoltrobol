@@ -24,10 +24,16 @@ class Train(models.Model):
   has_vending_machine = models.BooleanField()
   has_food_service = models.BooleanField()
 
+  def __str__(self):
+        return 'Train {}, I.D. {}'.format(self.train_model, self.train_id)
+
 class MaintenanceCrew(models.Model):
   crew_id = models.AutoField(primary_key=True)
   crew_leader = models.CharField(max_length=60)
   specialty_skill = models.TextField(max_length=255)
+
+  def __str__(self):
+        return 'Leader {}, I.D. {}'.format(self.crew_leader, self.crew_id)
 
 class MaintenanceTask(models.Model):
   maintenance_task_id = models.AutoField(primary_key=True)
@@ -35,4 +41,7 @@ class MaintenanceTask(models.Model):
   condition = models.CharField(max_length=50)
   maintenance_description = models.TextField(max_length=255)
   crew = models.ForeignKey(MaintenanceCrew, on_delete=models.CASCADE)
+
+  def __str__(self):
+        return 'Task {} ({})'.format(self.maintenance_task_id, self.date_maintained)
 
