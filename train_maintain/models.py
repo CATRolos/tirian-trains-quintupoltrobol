@@ -41,6 +41,7 @@ class MaintenanceTask(models.Model):
   condition = models.CharField(max_length=50)
   maintenance_description = models.TextField(max_length=255)
   crew = models.ForeignKey(MaintenanceCrew, on_delete=models.CASCADE)
+  train = models.ForeignKey(Train, on_delete=models.CASCADE)
 
   def __str__(self):
         return 'Task {} ({})'.format(self.maintenance_task_id, self.date_maintained)
