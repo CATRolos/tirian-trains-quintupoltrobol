@@ -8,12 +8,28 @@ Tirian Trains' Official Maintenance Log
 <h2>Tirian Trains' Official Maintenance Log</h2>
 <h3>Maintenance Tasks:</h3>
 
-
+<table>
+  <thead>
+    <tr>
+      <th>Maintenance Task I.D.</th>
+      <th>Date Maintained</th>
+      <th>Train Maintained</th>
+      <th>Description of Maintenance</th>
+      <th>Post-maintenance Condition</th>
+      <th>Maintenance Crew</th>
+      
+    </tr>
+  </thead>
   {% for object in maintenance_list %}
-  <p>
-  <a href="{{object.get_absolute_url}}">{{object.date_maintained}} | {{object.maintenance_description}} ({{object.train}})</a>
-  </p>
+  <tr>
+      <td>{{object.maintenance_task_id}}</td>
+      <td>{{object.date_maintained}}</td>
+      <td>{{object.train.train_model}} I.D. {{object.train_id}}</td>
+      <td>{{object.maintenance_description}}</td>
+      <td>{{object.condition}}
+      <td>I.D. {{object.crew.crew_id}}, Leader {{object.crew.crew_leader}}</td>
+  </tr>
   {% endfor %}
-<br>
+</table>
 
 {% endblock %}
