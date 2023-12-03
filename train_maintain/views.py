@@ -9,7 +9,6 @@ def pageview(request):
         FROM train_maintain_maintenancecrew, train_maintain_train, train_maintain_maintenancetask
         WHERE train_maintain_maintenancecrew.crew_id = train_maintain_maintenancetask.crew_id
         AND train_maintain_train.train_id = train_maintain_maintenancetask.train_id
-        AND train_maintain_maintenancetask.date_maintained = '2023-08-14'
         ORDER BY "Maintenance Date" DESC;
         '''
     )

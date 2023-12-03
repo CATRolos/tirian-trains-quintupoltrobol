@@ -1,25 +1,55 @@
 h2{
-  font-family: "Verdana";
+  font-family: "Archivo";
+  text-align: center;
 }
 h3{
-  font-family: "Verdana";
-  color: #43ca5a;
+  font-family: "Archivo";
+  text-align: center;
 }
 p{
-  font-family: "Verdana";
+  font-family: "Archivo";
+  text-align: center;
 }
 body{
   color: white;
-  background-color: #171717;
+  background-color: #111F2A;
+  background-image: linear-gradient(#111F2A, #07111A);
+  text-align: center;
 }
 a:link {
-  font-family: "Verdana";
+  font-family: "Archivo";
   text-decoration: none;
-  color: #43ca5a;
+  color: black;
 }
 a:visited {
-  color: #43ca5a;
+  color: black;
 }
 a:hover {
-  color: #005b0f;
+  color: #937000;
+}
+
+td, th {
+  font-family: Archivo, sans-serif;
+  border-collapse: collapse;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+}
+
+tr:nth-child(even){background-color: #0C151D;}
+tr:nth-child(odd){background-color: #111F2A;}
+
+tr:hover {background-color: #070C10;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #FFC300;
+  color: black;
+}
+
+.table {
+margin-left:auto; 
+margin-right:auto;
 }
