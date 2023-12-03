@@ -1,5 +1,4 @@
 from .models import Train as train, MaintenanceTask as maintenancetask, MaintenanceCrew as maintenancecrew
-from django.views.generic import DetailView
 from django.shortcuts import render
 from django.urls import reverse
 

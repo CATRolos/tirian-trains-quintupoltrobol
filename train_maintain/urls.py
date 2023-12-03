@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import pageview, MaintainDetailView
+from .views import pageview
 
 app_name = "train_maintain"
 
