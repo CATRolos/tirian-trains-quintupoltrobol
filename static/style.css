@@ -1,13 +1,13 @@
 h2{
-  font-family: "Archivo";
+  font-family: "Helvetica";
   text-align: center;
 }
 h3{
-  font-family: "Archivo";
+  font-family: "Helvetica";
   text-align: center;
 }
 p{
-  font-family: "Archivo";
+  font-family: "Helvetica";
   text-align: center;
 }
 body{
@@ -17,7 +17,7 @@ body{
   text-align: center;
 }
 a:link {
-  font-family: "Archivo";
+  font-family: "Helvetica";
   text-decoration: none;
   color: black;
 }
@@ -29,7 +29,7 @@ a:hover {
 }
 
 td, th {
-  font-family: Archivo, sans-serif;
+  font-family: Helvetica, sans-serif;
   border-collapse: collapse;
   border-radius: 5px;
   padding: 15px;

@@ -3,7 +3,6 @@
 {% block title %}
 Tirian Trains' Official Maintenance Log
 {% endblock %}
-
 {% block content %}
 <br>
 <img src="https://i.imgur.com/s4VkM5p.png", height="150">
@@ -11,17 +10,14 @@ Tirian Trains' Official Maintenance Log
 <h2>OFFICIAL MAINTENANCE LOG</h2>
 
 <table class ="table">
-  <thead>
-    <tr>
-      <th>Maintenance Task I.D.</th>
-      <th>Date Maintained</th>
-      <th>Train Maintained</th>
-      <th>Description of Maintenance</th>
-      <th>Post-maintenance Condition</th>
-      <th>Maintenance Crew</th>
-      
-    </tr>
-  </thead>
+  <tr>
+    <th>MAINTENANCE TASK I.D.</th>
+    <th>DATE MAINTAINED</th>
+    <th>TRAIN MAINTAINED</th>
+    <th>DESCRIPTION OF MAINTENANCE</th>
+    <th>POST-MAINTENANCE CONDITION</th>
+    <th>MAINTENANCE CREW</th>
+  </tr>
   {% for object in maintenance_list %}
   <tr>
       <td>{{object.maintenance_task_id}}</td>
