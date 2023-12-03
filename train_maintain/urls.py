@@ -1,8 +1,9 @@
 from django.urls import path
-from . import views
+from .views import pageview, MaintainDetailView
 
 app_name = "train_maintain"
 
 urlpatterns = [
-  path('', views.index, name='index')
+  path('', pageview, name='pageview'),
+  path('<int:pk>/details/', MaintainDetailView.as_view(), name="maintenance-detail")
 ]

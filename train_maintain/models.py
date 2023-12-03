@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
+from django.urls import reverse
 
 def validate_custom_format(value):
   first_char = value[0]
@@ -26,6 +27,9 @@ class Train(models.Model):
 
   def __str__(self):
         return 'Train {}, I.D. {}'.format(self.train_model, self.train_id)
+        
+  def get_absolute_url(self):
+        return reverse("train_maintain:maintenance-detail", kwargs={"pk": self.pk})
 
 class MaintenanceCrew(models.Model):
   crew_id = models.AutoField(primary_key=True)
@@ -34,6 +38,9 @@ class MaintenanceCrew(models.Model):
 
   def __str__(self):
         return 'Leader {}, I.D. {}'.format(self.crew_leader, self.crew_id)
+        
+  def get_absolute_url(self):
+        return reverse("train_maintain:maintenance-detail", kwargs={"pk": self.pk})
 
 class MaintenanceTask(models.Model):
   maintenance_task_id = models.AutoField(primary_key=True)
@@ -45,4 +52,7 @@ class MaintenanceTask(models.Model):
 
   def __str__(self):
         return 'Task {} ({})'.format(self.maintenance_task_id, self.date_maintained)
+        
+  def get_absolute_url(self):
+        return reverse("train_maintain:maintenance-detail", kwargs={"pk": self.pk})
 

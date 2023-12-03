@@ -1,0 +1,25 @@
+h2{
+  font-family: "Courier New";
+}
+h3{
+  font-family: "Courier New";
+  color: #43ca5a;
+}
+p{
+  font-family: "Courier New";
+}
+body{
+  color: white;
+  background-color: #171717;
+}
+a:link {
+  font-family: "Courier New";
+  text-decoration: none;
+  color: #43ca5a;
+}
+a:visited {
+  color: #43ca5a;
+}
+a:hover {
+  color: #005b0f;
+}

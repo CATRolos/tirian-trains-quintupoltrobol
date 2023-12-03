@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Tirian Trains' Official Maintenance Log
+{% endblock %}
+
+{% block content %}
+<h2>Tirian Trains' Official Maintenance Log</h2>
+<h3>Maintenance Tasks:</h3>
+
+
+  {% for object in maintenance_list %}
+  <p>
+  <a href="{{object.get_absolute_url}}">{{object.date_maintained}} | {{object.maintenance_description}} ({{object.train}})</a>
+  </p>
+  {% endfor %}
+<br>
+
+{% endblock %}
