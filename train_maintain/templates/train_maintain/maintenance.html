@@ -8,15 +8,52 @@ Tirian Trains' Official Maintenance Log
 <img src="https://i.imgur.com/s4VkM5p.png", height="150">
 <br><br>
 <h2>OFFICIAL MAINTENANCE LOG</h2>
-
+<p> Click on a column's header to display the entries in descending order according to the column.<br>
+  Click once for descending order, click again for ascending order.</p>
 <table class ="table">
   <tr>
-	<th><a href="?order_by=maintenance_task_id">MAINTENANCE TASK I.D.</a></th>
-	<th><a href="?order_by=date_maintained">DATE MAINTAINED</a></th>
-	<th><a href="?order_by=train_model">TRAIN MAINTAINED</a></th>
-	<th><a href="?order_by=maintenance_description">DESCRIPTION OF MAINTENANCE</a></th>
-	<th><a href="?order_by=condition">POST-MAINTENANCE CONDITION</a></th>
-	<th><a href="?order_by=crew_id">MAINTENANCE CREW</a></th>
+	<th>
+    {% if order_by == 'maintenance_task_id' and arrangement == 'DESC'%}
+    <a href="?order_by=maintenance_task_id&arrangement=">MAINTENANCE TASK I.D.</a>
+    {% else %}
+    <a href="?order_by=maintenance_task_id&arrangement=DESC">MAINTENANCE TASK I.D.</a>
+    {% endif %}
+  </th>   
+	<th>  
+    {% if order_by == 'train_maintain_maintenancetask.date_maintained' and arrangement == 'DESC'%}
+    <a href="?order_by=date_maintained&arrangement=">DATE MAINTAINED</a>
+    {% else %}
+    <a href="?order_by=date_maintainedd&arrangement=DESC">DATE MAINTAINED</a>
+    {% endif %}
+  </th>
+	<th>
+    {% if order_by == 'train_maintain_train.train_id' and arrangement == 'DESC'%}
+    <a href="?order_by=train_id&arrangement=">TRAIN MAINTAINED</a>
+    {% else %}
+    <a href="?order_by=train_id&arrangement=DESC">TRAIN MAINTAINED</a>
+    {% endif %}
+  </th>
+	<th>
+    {% if order_by == 'train_maintain_maintenancetask.maintenance_description' and arrangement == 'DESC'%}
+    <a href="?order_by=maintenance_description&arrangement=">DESCRIPTION OF MAINTENANCE</a>
+    {% else %}
+    <a href="?order_by=maintenance_description&arrangement=DESC">DESCRIPTION OF MAINTENANCE</a>
+    {% endif %}
+  </th>
+	<th>
+    {% if order_by == 'train_maintain_maintenancetask.condition' and arrangement == 'DESC'%}
+    <a href="?order_by=condition&arrangement=">POST-MAINTENANCE CONDITION</a>
+    {% else %}
+    <a href="?order_by=condition&arrangement=DESC">POST-MAINTENANCE CONDITION</a>
+    {% endif %}
+  </th>
+	<th>
+    {% if order_by == 'train_maintain_maintenancecrew.crew_id' and arrangement == 'DESC'%}
+    <a href="?order_by=crew_id&arrangement=">MAINTENANCE CREW</a>
+    {% else %}
+    <a href="?order_by=crew_id&arrangement=DESC">MAINTENANCE CREW</a>
+    {% endif %}
+  </th>
   </tr>
   {% for object in maintenance_list %}
   <tr>
