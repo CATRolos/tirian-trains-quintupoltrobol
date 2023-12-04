@@ -5,4 +5,5 @@ app_name = "train_maintain"
 
 urlpatterns = [
   path('', pageview, name='pageview'),
+  
 ]

@@ -11,12 +11,12 @@ Tirian Trains' Official Maintenance Log
 
 <table class ="table">
   <tr>
-    <th>MAINTENANCE TASK I.D.</th>
-    <th>DATE MAINTAINED</th>
-    <th>TRAIN MAINTAINED</th>
-    <th>DESCRIPTION OF MAINTENANCE</th>
-    <th>POST-MAINTENANCE CONDITION</th>
-    <th>MAINTENANCE CREW</th>
+	<th><a href="?order_by=maintenance_task_id">MAINTENANCE TASK I.D.</a></th>
+	<th><a href="?order_by=date_maintained">DATE MAINTAINED</a></th>
+	<th><a href="?order_by=train_model">TRAIN MAINTAINED</a></th>
+	<th><a href="?order_by=maintenance_description">DESCRIPTION OF MAINTENANCE</a></th>
+	<th><a href="?order_by=condition">POST-MAINTENANCE CONDITION</a></th>
+	<th><a href="?order_by=crew_id">MAINTENANCE CREW</a></th>
   </tr>
   {% for object in maintenance_list %}
   <tr>
@@ -29,5 +29,7 @@ Tirian Trains' Official Maintenance Log
   </tr>
   {% endfor %}
 </table>
+
+<br><br><br>
 
 {% endblock %}

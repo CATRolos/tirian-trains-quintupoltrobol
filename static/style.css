@@ -49,7 +49,15 @@ th {
   color: black;
 }
 
+th a {
+    display: block;
+}
+
 .table {
 margin-left:auto; 
 margin-right:auto;
+}
+
+.form {
+font-family: "Helvetica";
 }
