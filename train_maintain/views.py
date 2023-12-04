@@ -5,7 +5,7 @@ from django.urls import reverse
 def pageview(request):
     # Get the parameter from the URL if any header is clicked
     order_by = request.GET.get('order_by', 'date_maintained')  # Default to sorting by 'date_maintained'
-    arrangement = request.GET.get ('arrangement', '') # Default to descending
+    arrangement = request.GET.get ('arrangement', 'DESC') # Default to descending
     
     # Define the columns that are sortable
     sortable_columns = {
@@ -15,7 +15,6 @@ def pageview(request):
         'maintenance_description': 'train_maintain_maintenancetask.maintenance_description',
         'condition': 'train_maintain_maintenancetask.condition',
         'crew_id': 'train_maintain_maintenancecrew.crew_id',
-        'crew_leader': 'train_maintain_maintenancecrew.crew_leader'
     }
     
     # Check if the column is sortable
